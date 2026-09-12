@@ -1,0 +1,25 @@
+<template>
+    <template lwc:if={readMode}>
+        <div class="card">
+            <p><b>Name : </b> <i>{userObj.name}</i></p>
+            <p><b>Email : </b> <i>{userObj.email}</i></p>
+            <p><b>Designation : </b> <i>{userObj.designation}</i></p>
+            <div class="badge">{userObj.category}</div>
+            <div class="actions">
+                <button onclick={editButtonHandler}>Edit Details</button>
+            </div>
+        </div>
+
+    </template>
+    <template lwc:else>
+        <div class="card">
+            <lightning-input type="text" label="Preferred Name" lwc:ref="name"></lightning-input>
+            <lightning-input type="email" label="Preferred Email" lwc:ref="email"></lightning-input>
+            <p class="message">Note : To Change Designation, Reach out to Royal Court Admin</p>
+            <div class="actions">
+                <button onclick={saveHandler}>Save</button>
+            </div>
+        </div>
+
+    </template>
+</template>
