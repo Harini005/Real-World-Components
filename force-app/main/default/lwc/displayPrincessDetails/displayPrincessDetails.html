@@ -1,0 +1,10 @@
+<template>
+    <template lwc:if={selectedprincessInfo}>
+        <div class="card">
+            <p>{selectedprincessInfo.Name}</p>
+            <p>{selectedprincessInfo.Email__c}</p>
+            {princessPotriat(selectedprincessInfo.Photo__c)}
+            <img src={princessPortrait} alt={selectedprincessInfo.Name} height="200px" width="200px">
+        </div>
+    </template>
+</template>

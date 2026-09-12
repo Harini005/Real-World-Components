@@ -1,0 +1,32 @@
+*{
+    box-sizing:  border-box;
+}
+.scroller {
+    height: 300px;
+    overflow: scroll;
+    border : 2px solid gray;
+   
+}
+
+.elem {
+    background-color: peachpuff;
+    text-align : center;
+    height : 50px;
+    padding-top : 15px;
+    color : purple;
+    
+}
+
+.elem:nth-child(even){
+    background-color : pink;
+}
+
+.elem:hover{
+    color : white;
+    cursor: pointer;
+    background-color : lightblue;
+}
+
+.elem:active{
+    cursor:progress;
+}

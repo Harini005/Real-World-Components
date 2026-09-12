@@ -1,0 +1,9 @@
+<template>
+    <div class="scroller">
+        <template lwc:if={listAvailable}>
+            <template for:each={princess} for:item="princessInfo">
+                <div key={princessInfo.Id} class="elem" data-princess-id={princessInfo.Id} onclick={capturePrincessSelected}>{princessInfo.Name}</div>
+            </template>
+        </template>
+    </div>
+</template>
